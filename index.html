@@ -1,47 +1,57 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>ShaDuBois - A streaming idle game</title>
-        <meta name="title" content="ShaDuBois - A streaming idle game">
-        <meta name="twitter:title" content="ShaDuBois - A streaming idle game">
-        <meta property="og:title" content="ShaDuBois - A streaming idle game">
-        <meta name="description" content="Progress through a really not captivating idle game while enjoying ShaDuBois's stream">
-        <meta property="og:description" content="Progress through a really not captivating idle game while enjoying ShaDuBois's stream">
-        <link rel="shortcut icon" type="image/x-icon" href="resources/images/main.ico">
-    
-        <meta name="keywords" content="ShaDuBois, game, idle" lang="en">
-        <meta name="language" content="en">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-        <meta property="og:site_name" content="shadubois.github.io">
-        <meta property="og:url" content="https://shadubois.github.io/">
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="https://shadubois.github.io/resources/images/main-sq.png">
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:creator" content="@ShaDuBois">
-    
-        <link rel="stylesheet" href="resources/stylesheet.min.css">
-        <script src="resources/ga.js" async></script>
-        <meta name="google-site-verification" content="a6Dkj3tZ7SEai-QbfbOI0M0Jb65Lp18nbY1Hl3LwOro">
-      </head>
-    <body>
 
-      <div id="twitch-embed"></div>
+<head>
+	<title>ShaDuBois - A streaming idle game</title>
+	<meta name="title" content="ShaDuBois - A streaming idle game">
+	<meta name="twitter:title" content="ShaDuBois - A streaming idle game">
+	<meta property="og:title" content="ShaDuBois - A streaming idle game">
+	<meta name="description"
+		content="Progress through a really not captivating idle game while enjoying ShaDuBois's stream">
+	<meta property="og:description"
+		content="Progress through a really not captivating idle game while enjoying ShaDuBois's stream">
+	<link rel="shortcut icon" type="image/x-icon" href="resources/images/main.ico">
 
-      <!-- Load the Twitch embed JavaScript file -->
-      <script src="https://embed.twitch.tv/embed/v1.js"></script>
-  
-      <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
-      <script type="text/javascript">
-        new Twitch.Embed("twitch-embed", {
-          width: 854,
-          height: 480,
-          channel: "shadubois",
-          // Only needed if this page is going to be embedded on other websites
-          //parent: ["embed.example.com", "othersite.example.com"]
-        });
-      </script>
+	<meta name="keywords" content="ShaDuBois, game, idle" lang="en">
+	<meta name="language" content="en">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    </body>
+	<meta property="og:site_name" content="shadubois.github.io">
+	<meta property="og:url" content="https://shadubois.github.io/">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://shadubois.github.io/resources/images/main-sq.png">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:creator" content="@ShaDuBois">
+
+	<link rel="stylesheet" href="resources/stylesheet.min.css">
+	<script src="resources/ga.js" async></script>
+	<meta name="google-site-verification" content="a6Dkj3tZ7SEai-QbfbOI0M0Jb65Lp18nbY1Hl3LwOro">
+</head>
+
+<body>
+
+	<div id="stream-status"></div>
+	<div id="twitch-embed"></div>
+
+	<!-- Load the Twitch embed JavaScript file -->
+	<script src="https://embed.twitch.tv/embed/v1.js"></script>
+	<script src="live.js"></script>
+
+	<!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
+	<script type="text/javascript">
+
+		var live = new LiveManager()
+
+		var embed = new Twitch.Embed("twitch-embed", {
+			width: 854,
+			height: 480,
+			channel: "shadubois",
+			// Only needed if this page is going to be embedded on other websites
+			//parent: ["embed.example.com", "othersite.example.com"]
+		});
+	</script>
+
+</body>
+
 </html>
