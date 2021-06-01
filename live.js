@@ -1,16 +1,16 @@
 class LiveManager {
-    constructor(item, name = 'shadubois') {
-        this.item = item;
+    constructor(div_id, name = 'shadubois') {
+        this.item = document.getElementById(div_id);
         this.name = name;
-        this.item.value = this.isLive()
+        this.item.value = this.isLive();
     }
 
     isLive() {
         $.getJSON('https://api.twitch.tv/kraken/streams/' + this.name, function (channel) {
             if (channel["stream"] == null) {
-                return false
+                return false;
             } else {
-                return true
+                return true;
             }
         });
     }
