@@ -7,6 +7,7 @@ class LiveManager {
 
     isLive() {
         $.getJSON('https://api.twitch.tv/helix/streams/?channel=' + this.name, function (channel) {
+            console.log(channel);
             if (channel["stream"] == null) {
                 return false;
             } else {
