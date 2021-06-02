@@ -2,7 +2,7 @@ class LiveManager {
     constructor(div_id, name = 'shadubois') {
         this.item = document.getElementById(div_id);
         this.name = name;
-        this.item.value = this.isLive();
+        this.item.innerHTML = this.isLive();
     }
 
     isLive() {
